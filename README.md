@@ -22,4 +22,21 @@ and after that run the test:
 
       test_remote_domains.sh
  
+ as result I have got output (for example):
+ 
+================== DOMAIN: openldap1
+Number of users: 6
+Number of groups: 3
+
+================== DOMAIN: openldap2
+Number of users: 3
+Number of groups: 3
+
+================== DOMAIN: AD2
+Number of users: 11
+Number of groups: 48
+
+================== DOMAIN: openldap2_new
+Number of users: 100
+Number of groups: 10
  
