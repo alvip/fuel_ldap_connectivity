@@ -15,16 +15,8 @@ or do the same test from other location but before should set variables in openr
 
 modify your openrc file
 
---- 
-export ADDR=root@172.16.57.50
-export PWD=r00tme
-----
-
-
-modify your openrc file:
-   
-       export ADDR=root@172.16.57.50
-       export PWD=r00tme
+      export ADDR=root@172.16.57.50
+      export PWD=r00tme
 
 
 and after that run the test:
