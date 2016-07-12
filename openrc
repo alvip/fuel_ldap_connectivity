@@ -1,5 +1,5 @@
-# export ADDR=root@172.16.57.50
-# export PWD=r00tme
-
-export ADDR=root@172.16.56.50
+export ADDR=root@172.16.57.50
 export PWD=r00tme
+
+#export ADDR=root@172.16.56.50
+#export PWD=r00tme
