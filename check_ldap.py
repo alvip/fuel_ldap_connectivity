@@ -42,18 +42,30 @@ def test(suffix, url, user, pwd, searchfilter="cn=*", use_tls=False, cacert=""):
 
 if __name__ == '__main__':
 
-    res = test(suffix='dc=mirantis,dc=tld', pwd='1111', url='ldap://172.18.196.224', use_tls=True,
+    print '=======> openldap1'
+    try:
+        res = test(suffix='dc=mirantis,dc=tld', pwd='1111', url='ldap://172.18.196.224', use_tls=True,
                searchfilter="objectclass=inetOrgPerson", user='cn=admin,dc=mirantis,dc=tld',
-               cacert='openldap1.pem')
-    pprint.pprint(len(res[1]))
-
-    res = test(suffix='dc=openldap2,dc=tld', pwd='1111', url='ldap://172.18.186.129', use_tls=False,
+               cacert='./openldap1.pem')
+        pprint.pprint(len(res[1]))
+    except Exception as e:
+        print e
+        
+    print '=======> openldap2'
+    try:
+         res = test(suffix='dc=openldap2,dc=tld', pwd='1111', url='ldap://172.18.186.129', use_tls=False,
                searchfilter="objectclass=inetOrgPerson", user='cn=admin,dc=openldap2,dc=tld',
-               cacert='openldap1.pem')
-    pprint.pprint(len(res[1]))
-    
-    res = test(suffix='dc=openldap1,dc=tld', pwd='qwerty123!', url='ldap://172.16.56.27', use_tls=True, 
+               cacert='./openldap2.pem')
+         pprint.pprint(len(res[1]))
+    except Exception as e:
+        print e
+
+    print '=======> openldap1'
+    try:    
+        res = test(suffix='dc=openldap1,dc=tld', pwd='qwerty123!', url='ldap://172.16.56.27', use_tls=True, 
                searchfilter="objectclass=inetOrgPerson", user='cn=admin,dc=openldap1,dc=tld',
                cacert='openldap1.pem')
-    pprint.pprint(len(res[1]))
+        pprint.pprint(len(res[1]))
+    except Exception as e:
+        print e
 

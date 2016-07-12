@@ -5,11 +5,10 @@ import pprint
 import check_ldap
 
 def show_error(ldap_set, domain_name, e, objectclass=''):
-
-    print 'user=%s' % ldap_set['user']
-    print 'password=%s' % ldap_set['password']
     print 'suffix=%s' % ldap_set['suffix']
     print 'url=%s' % ldap_set['url']
+    print 'user=%s' % ldap_set['user']
+    print 'password=%s' % ldap_set['password']
     print 'use_tls=%s' % ldap_set['use_tls']
     print 'searchfilter=%s' % ldap_set[objectclass]
     print 'cacert=%s.pem' % domain_name
