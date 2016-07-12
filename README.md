@@ -1,5 +1,5 @@
 # fuel_ldap_connectivity
-Check LDAP settings before deployment of environment, try to connect each domain LDAP server and get user and group list.
+Check LDAP connectivity before deployment of environment, try to connect each domain LDAP server and get user and group list.
 
 To check LDAP connectivity one should perform the following commands on fuel master node:
       
@@ -8,24 +8,24 @@ To check LDAP connectivity one should perform the following commands on fuel mas
       bash test_domains.sh
  
  
- 
 or do the same test from other location but before should set variables in openrc file. For example:
        
        git clone https://github.com/alvip/fuel_ldap_connectivity && cd fuel_ldap_connectivity
 
-<<<<<<< HEAD
+
 modify your openrc file
 
 --- 
 export ADDR=root@172.16.57.50
 export PWD=r00tme
 ----
-=======
+
+
 modify your openrc file:
    
        export ADDR=root@172.16.57.50
        export PWD=r00tme
->>>>>>> ed43e34af1eb664236c96931b15de4a0ae8be16e
+
 
 and after that run the test:
 
