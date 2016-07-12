@@ -1,0 +1,8 @@
+
+export ADDR=root@172.16.56.50
+export ENV_ID=7
+export PWD=r00tme
+
+export ADDR=root@172.16.57.50
+export ENV_ID=4
+export PWD=r00tme
