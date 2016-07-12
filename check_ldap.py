@@ -11,8 +11,8 @@ def test(suffix, url, user, pwd, searchfilter="cn=*", use_tls=False, cacert=""):
 	if not os.path.isfile(cacert):
 	    raise IOError(_("tls_cacertfile %s not found or is not a file") % cacert)
 	ldap.set_option(ldap.OPT_X_TLS_CACERTFILE, cacert)
-	#ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_NEVER)
-	ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_HARD)
+	ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_NEVER)
+	#ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_HARD)
 	#ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_DEMAND)
 	#ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_ALLOW)
 	# url = ldapurl.LDAPUrl(urlscheme=proto, hostport="%s:%s" % (server, str(port))).initializeUrl()
