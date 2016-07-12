@@ -12,10 +12,11 @@ or do the same test from other location but before should set variables in openr
 git clone https://github.com/alvip/fuel_ldap_connectivity && cd fuel_ldap_connectivity
 
 modify your openrc file
------------ 
+
+--- 
 export ADDR=root@172.16.57.50
 export PWD=r00tme
------------
+----
 
 and after that run the test:
 test_remote_domains.sh
